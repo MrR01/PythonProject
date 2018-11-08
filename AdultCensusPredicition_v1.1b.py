@@ -111,9 +111,9 @@ df1c.dtypes
 
 #5. Modeling
 ## Split-out Validation Dataset and Create Test Variables
-X = df1c[['Age', 'Education-Num', 'Race',  'Gender', 'Capital-Gain']] #.values means taking all the values
+X = df1c.iloc[:, :-1] #means taking all the values
 print(X)
-Y = df1c[['Income']] 
+Y = df1c.iloc[:, 5]
 print(Y)
 
 validation_size = 0.20
