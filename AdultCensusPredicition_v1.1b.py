@@ -29,7 +29,7 @@ from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, Gradien
 from sklearn.neural_network import MLPClassifier
 
 #Load Data
-os.chdir("C:/Raj/Education/DataScience/Tutorial/PythonSpyder/Adult") 
+os.chdir("C:/../PythonSpyder/Adult") 
 
 df1a = pd.read_csv('adult.txt')
 df1a.shape
@@ -40,7 +40,7 @@ df1a.describe()
 df1b = pd.read_csv('adult.txt', names=['Age','WorkClass','fnlwgt','Education','Education-Num','Marital-Status', 'Occupation','Relationship','Race','Gender','Capital-Gain','Capital-Loss','Hrs-per-wk','Country','Income'], header=0)
 print (df1b)
 
-export_csv = df1b.to_csv (r'C:\Raj\Education\DataScience\Tutorial\PythonSpyder\Adult\export_dataframe.csv', index = None, header=True)
+export_csv = df1b.to_csv ('C:\..\export_dataframe.csv', index = None, header=True)
 
 #check of any missing values
 df1b = df1b[df1b.isnull().any(axis=1)]
